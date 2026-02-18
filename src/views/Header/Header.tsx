@@ -1,9 +1,16 @@
+import { HamburgerMenuIcon } from "@radix-ui/react-icons";
+import { useIsVisibleItemOnScreen } from "../../app/hooks/useIsVisibleItemOnScreen";
 import { useWindowWidth } from "../../app/hooks/useWindowWidth";
+import NavigationHeader from "../../views/Header/Components/NavigationHeader";
 
+import { cn } from "../../app/utils/cn/cn";
+import logoIcon from "../../assets/icons/android-chrome-512x512_1.svg";
+import useModal from "../../Components/Modal/useModal";
+import Modal from "../../Components/Modal/Modal";
 
 const Header = () => {
   const { isVisible, elementRef } = useIsVisibleItemOnScreen();
-  const { isVisibleModal, handleOpenModal, handleCloseModal } = useMod();
+  const { isVisibleModal, handleOpenModal, handleCloseModal } = useModal();
   const { width } = useWindowWidth();
 
   return (
@@ -11,7 +18,7 @@ const Header = () => {
       <nav
         ref={elementRef}
         className={cn(
-          "flex items-center border-b border-700 justify-between w-[95%] pt-6 pb-6  ",
+          "flex items-center border-b border-gray-700  justify-between w-[95%] pt-6 pb-6  ",
           isVisible ? " animate-startSlideDown" : ""
         )}
       >
@@ -28,7 +35,7 @@ const Header = () => {
               alt="Logo"
             />
           </figure>
-          <h1 className="font-bold text-xl 2xl:text-[1.3rem]">Rafael</h1>
+          <h1 className="font-bold text-xl 2xl:text-[1.3rem] text-gray-950">Rafael</h1>
         </a>
 
         {width >= 768 ? (
@@ -47,7 +54,7 @@ const Header = () => {
               <NavigationHeader
                 ClassNameUL="flex flex-col gap-2"
                 ClassNameNav="flex h-full w-full justify-center items-center"
-                classNameLI="text-2xl font-bold"
+                classNameLI="text-2xl font-bold text-gray-900"
                 onClickNavigate={handleCloseModal}
               />
             </Modal>
@@ -55,6 +62,7 @@ const Header = () => {
         )}
       </nav>
     </header>
-}
+  );
+};
 
-export default Header
+export default Header;

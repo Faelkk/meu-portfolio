@@ -1,6 +1,8 @@
 
 import './App.css'
-import Header from './Components/Header/Header'
+import Header from './views/Header/Header'
+import Intro from './views/Intro/Intro'
+
 
 function App() {
 
@@ -8,6 +10,7 @@ function App() {
   return (
     <section className='bg-gray-50 min-h-screen w-full'>
       <Header />
+      <Intro />
     </section>
   )
 }
