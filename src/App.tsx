@@ -3,6 +3,7 @@ import './App.css'
 import About from './views/About/About'
 import Header from './views/Header/Header'
 import Intro from './views/Intro/Intro'
+import Skills from './views/Skills/Skills'
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <Intro />
       <About />
+      <Skills />
     </section>
   )
 }
