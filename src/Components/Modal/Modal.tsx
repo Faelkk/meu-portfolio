@@ -12,9 +12,11 @@ interface ModalProps {
   classNameContent?: string;
   classNameOverlay?: string;
   children: ReactNode;
+  title: string
 }
 
 const Modal = ({
+  title,
   open,
   classNameContent,
   classNameOverlay,
@@ -26,6 +28,11 @@ const Modal = ({
       <Dialog.Overlay
         className={cn("fixed inset-0  z-51   ", classNameOverlay)}
       />
+
+      <Dialog.Title className="text-xl font-bold mb-4">
+          {title}
+        </Dialog.Title>
+
       <Dialog.Content className={cn(classNameContent)}>
         <button
           className="absolute right-0 top-0 outline-none "

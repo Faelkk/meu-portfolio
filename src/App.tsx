@@ -1,5 +1,6 @@
 
 import './App.css'
+import Projects from './Components/Projects/Projects'
 import About from './views/About/About'
 import Header from './views/Header/Header'
 import Intro from './views/Intro/Intro'
@@ -15,6 +16,7 @@ function App() {
       <Intro />
       <About />
       <Skills />
+      <Projects />
     </section>
   )
 }
