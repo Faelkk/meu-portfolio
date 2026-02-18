@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import type { SkillFetch } from "../entities/Skill";
+import { skillData } from "../../mock/skills/Skill";
 
 
 
@@ -12,27 +13,9 @@ export function useSkills() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       try {
-        const mock: SkillFetch = {
-          skills: [
-            {
-              name: "React",
-              description: "Biblioteca para construção de interfaces",
-              url: "https://react.dev"
-            },
-            {
-              name: "TypeScript",
-              description: "Superset do JavaScript com tipagem estática",
-              url: "https://www.typescriptlang.org"
-            },
-            {
-              name: "Node.js",
-              description: "Runtime JavaScript para backend",
-              url: "https://nodejs.org"
-            }
-          ]
-        };
+       
 
-        setData(mock);
+         setData(skillData);
       } catch {
         setError("Erro ao buscar skills");
       } finally {
