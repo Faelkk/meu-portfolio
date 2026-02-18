@@ -3,6 +3,7 @@ import { useRef } from "react";
 import toast from "react-hot-toast";
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import emailjs from "@emailjs/browser";
 
 const schema = z.object({
   user_name: z.string().nonempty("Nome é obrigatório"),
@@ -29,9 +30,13 @@ const useContact = () => {
     try {
       console.log("Dados enviados:", data);
 
-      // se você realmente precisar do formRef
       if (formRef.current) {
-        console.log("Form ref disponível");
+         await emailjs.sendForm(
+          "achfaelMessage",
+          "template_y1py0zq",
+          formRef.current,
+          "_FXMz8RtEJZw6v39w"
+        );
       }
 
       toast.success("Email enviado com sucesso");

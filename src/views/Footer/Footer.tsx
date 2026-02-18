@@ -20,10 +20,10 @@ const Footer = () => {
           <div className="border-2 border-gray-950 dark:border-gray-50 p-0.75 rounded-full">
                <Logo className="w-6 h-6" />
           </div>
-          <span className="hidden sm:block text-left text-gray-50">
+          <span className="hidden sm:block text-left text-woodsmoke-900 dark:text-gray-50">
             Developed by <strong>Rafael Achtenberg</strong>
           </span>
-          <span className="sm:hidden block ">
+          <span className="sm:hidden block text-woodsmoke-900 font-medium">
             Rafael
           </span>
         </a>
