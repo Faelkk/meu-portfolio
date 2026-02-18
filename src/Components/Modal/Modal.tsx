@@ -35,11 +35,11 @@ const Modal = ({
 
       <Dialog.Content className={cn(classNameContent)}>
         <button
-          className="absolute right-0 top-0 outline-none "
+          className="absolute right-0 top-0 outline-none cursor-pointer"
           aria-label="Close"
           onClick={onClose}
         >
-          <Cross2Icon className="h-7 w-7" />
+          <Cross2Icon className="h-7 w-7 text-woodsmoke-900 dark:text-gray-50" />
         </button>
 
         {children}

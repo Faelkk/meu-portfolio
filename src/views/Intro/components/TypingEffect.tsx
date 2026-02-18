@@ -48,7 +48,7 @@ const TypingEffect = ({
   }, [displayedText, isDeleting, text, speed, eraseSpeed, typingDelay]);
 
   return (
-    <span className="text-[1.2rem] text-center text-blue-950 font-bold md:text-4xl w-full md:text-start">
+    <span className="text-[1.2rem] text-center text-blue-950 dark:text-gray-100 font-bold md:text-4xl w-full md:text-start">
       {displayedText}
       <span className="text-primary-750 pl-1 animate-pulse">|</span>
     </span>

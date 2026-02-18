@@ -13,7 +13,7 @@ function App() {
 
 
   return (
-    <section className='bg-gray-50 min-h-screen w-full'>
+    <section className='bg-gray-50 dark:bg-woodsmoke-900 min-h-screen w-full dark:bg-woodsmoke'>
       <Header />
       <Intro />
       <About />

@@ -16,7 +16,7 @@ const NavigationHeader = ({
 }: NavigationsHeaderProps) => {
   return (
     <nav className={ClassNameNav}>
-      <ul className={cn("list-none pl-0 ", ClassNameUL)}>
+      <ul className={cn("list-none pl-0 text-gray-900 dark:text-gray-100", ClassNameUL)}>
         <li className={classNameLI}>
           <a
             href="#inicio"

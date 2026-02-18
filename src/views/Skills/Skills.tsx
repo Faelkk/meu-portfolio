@@ -27,7 +27,7 @@ const Skills = () => {
 
   if (skills && !isLoading)
     return (
-      <Container className="mt-20" id="skills">
+      <Container className="mt-20 " id="skills">
         <section
           className={cn(
             "flex flex-col items-center md:gap-10 md:flex-row w-[90%]",
@@ -37,7 +37,7 @@ const Skills = () => {
         >
           <article className="flex md:w-[50%]">
             <div className="flex items-center flex-col">
-              <h2 className="font-bold text-4xl mb-10">Minhas habilidades</h2>
+              <h2 className="font-bold text-4xl mb-10 text-gray-950 dark:text-gray-300">Minhas habilidades</h2>
 
               <div className="flex justify-center items-center">
                 <section className="grid grid-cols-3 sm:grid-cols-5 gap-3 pb-8">
@@ -57,7 +57,7 @@ const Skills = () => {
             </div>
           </article>
 
-          <section className="flex w-full min-h-80 text-[1.1rem] items-center bg-[#eee] rounded-lg 2xl:text-[1.4rem] justify-center  md:w-[50%]">
+          <section className="flex w-full min-h-80 text-[1.1rem] items-center bg-gray-300 dark:bg-woodsmoke-800 rounded-lg 2xl:text-[1.4rem] justify-center  md:w-[50%]">
             {status.isHovered ? (
               <div
                 className={cn(
@@ -65,10 +65,10 @@ const Skills = () => {
                   shouldAnimate ? "animate-startSlideLeft" : ""
                 )}
               >
-                <h2 className="text-xl capitalize mb-2  text-blue-900 font-bold">
+                <h2 className="text-xl capitalize mb-2  text-blue-900 dark:text-blue-300 font-bold">
                   {skills.find((skill) => skill.name === status.skillId)?.name}
                 </h2>
-                <p className="text-blue-800 text-sm">
+                <p className="text-blue-800 dark:text-blue-300 text-sm">
                   {
                     skills.find((skill) => skill.name === status.skillId)
                       ?.description
@@ -77,7 +77,7 @@ const Skills = () => {
               </div>
             ) : (
               <div className="flex justify-center items-center ">
-                <p className="text-sm xl:text-base">
+                <p className="text-sm xl:text-base text-gray-800 dark:text-woodsmoke-300 font-medium">
                   Clique em algum ícone para ver mais informações
                 </p>{" "}
               </div>

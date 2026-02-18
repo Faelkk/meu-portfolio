@@ -2,13 +2,14 @@ import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import useContact from "./useContact";
 
 
-import emailIcon from "../../assets/icons/gmail-svgrepo-com.svg";
+
 import Container from "../../Components/Container/Container";
 import { useIsVisibleItemOnScreen } from "../../app/hooks/useIsVisibleItemOnScreen";
 import Textarea from "../../Components/Textarea/Textarea";
 import Input from "../../Components/Input/Input";
 import { cn } from "../../app/utils/cn/cn";
 import { Controller } from "react-hook-form";
+import Email from "../../Components/icons/email";
 
 const Contact = () => {
   const { control, errors, handleSubmit, hookFormSubmit, register, formRef } = useContact();
@@ -17,11 +18,11 @@ const Contact = () => {
   return (
     <Container className="my-20" id="contact">
       <section className={cn('grid md:grid-cols-2 w-[90%] gap-5', isVisible ? 'animate-startSlideRight' : '')} ref={elementRef}>
-        <div className="flex flex-col gap-5 bg-[#eee] rounded-md p-5">
-          <h2 className="font-bold text-4xl mb-6">Entre em contato Comigo</h2>
+        <div className="flex flex-col gap-5 bg-gray-200 dark:bg-woodsmoke-800 rounded-md p-5">
+          <h2 className="font-bold text-4xl mb-6 text-gray-950 dark:text-gray-300">Entre em contato Comigo</h2>
 
           <div className="flex flex-col justify-between gap-6 flex-1">
-            <p className="text-md">
+            <p className="text-md text-woodsmoke-900 dark:text-woodsmoke-400">
               Procurando por um desenvolvedor ou gostaria de compartilhar seu
               feedback? Fique à vontade para entrar em contato comigo! Estou
               empolgado para responder e ajudar o mais rápido possível. Utilize
@@ -35,7 +36,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="hover:scale-105 transition"
               >
-                <GitHubLogoIcon className="w-8 h-8" />
+                <GitHubLogoIcon className={cn("w-8 h-8 text-woodsmoke-950 dark:text-gray-50")} />
               </a>
 
               <a
@@ -44,7 +45,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="hover:scale-105 transition"
               >
-                <LinkedInLogoIcon className="w-8 h-8" />
+                <LinkedInLogoIcon className={cn("w-8 h-8 text-woodsmoke-950 dark:text-gray-50")} />
               </a>
 
               <a
@@ -53,7 +54,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="hover:scale-105 transition"
               >
-                <img src={emailIcon} alt="Email" className="h-8 w-8" />
+              <Email className="w-8 h-8 text-woodsmoke-950 dark:text-gray-50" />
               </a>
             </nav>
           </div>
@@ -62,7 +63,7 @@ const Contact = () => {
         <aside className="flex justify-center">
           <form
             ref={formRef}
-            className="flex flex-col w-full bg-[#f9f5f5] p-5 rounded-md md:w-[80%] gap-4"
+            className="flex flex-col w-full bg-gray-200 dark:bg-woodsmoke-800 p-5 rounded-md md:w-[80%] gap-4"
              onSubmit={hookFormSubmit(handleSubmit)}
           >
             <Input

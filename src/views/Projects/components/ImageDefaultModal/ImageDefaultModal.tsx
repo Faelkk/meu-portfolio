@@ -20,7 +20,21 @@ const ImageSkeleton = ({ src, alt, className }: ImageSkeletonProps) => {
     <div className="grid">
       {skeleton && (
         <div
-          className="skeleton h-full bg-linear-to-r from-gray-300 via-white to-gray-300 bg-gray-300 size  animate-pulse transition "
+      className="
+  skeleton 
+  h-full 
+  size
+  animate-pulse 
+  transition
+  bg-linear-to-r 
+  from-gray-300 
+  via-white 
+  to-gray-300
+  dark:from-woodsmoke-800
+  dark:via-woodsmoke-800
+  dark:to-woodsmoke-800
+"
+
           style={{ backgroundSize: "200%", gridArea: "1/1" }}
         ></div>
       )}

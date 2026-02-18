@@ -1,6 +1,9 @@
 
 @import "tailwindcss";
 
+body {
+  overflow-x: hidden
+}
 
 
 @import "tailwindcss";
@@ -62,6 +65,36 @@
   --color-blue-800: #334e57;
   --color-blue-900: #2e424b;
   --color-blue-950: #1e3038;
+
+
+--color-bluevariant-text:#3A78FF
+
+
+--color-mirage-50: #f4f6fb;
+--color-mirage-100: #e7ecf7;
+--color-mirage-200: #cad7ed;
+--color-mirage-300: #9bb4de;
+--color-mirage-400: #668dca;
+--color-mirage-500: #426fb5;
+--color-mirage-600: #315798;
+--color-mirage-700: #29467b;
+--color-mirage-800: #253c67;
+--color-mirage-900: #233557;
+--color-mirage-950: #101727;
+
+
+--color-woodsmoke-50: #fafafa;
+--color-woodsmoke-100: #f5f5f5;
+--color-woodsmoke-200: #e6e6e6;
+--color-woodsmoke-300: #d3d3d3;
+--color-woodsmoke-400: #a3a3a3;
+--color-woodsmoke-500: #727272;
+--color-woodsmoke-600: #535353;
+--color-woodsmoke-700: #404040;
+--color-woodsmoke-800: #272727;
+--color-woodsmoke-900: #1b1b1b;
+--color-woodsmoke-950: #0b0b0b;
+
 
 
   /* =========================

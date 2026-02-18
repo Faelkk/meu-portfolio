@@ -22,14 +22,14 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           {...props}
           placeholder=" "
           className={cn(
-            "bg-white rounded-lg border border-gray-500 px-3 h-13 text-gray-800 w-full pt-4 peer placeholder-shown:pt-0  focus:border-gray-800 transition-all outline-none",
+            "bg-white dark:bg-woodsmoke-900 rounded-lg border border-gray-500 dark:border-woodsmoke-900 px-3 h-16 text-woodsmoke-800 w-full pt-4 peer placeholder-shown:pt-0  focus:border-gray-800 transition-all outline-none dark:text-woodsmoke-400 placeholder:dark:text-woodsmoke-400",
             error && "border-red-900 focus:border-red-900",
             className
           )}
         />
         <label
           htmlFor={inputId}
-          className="absolute text-xs left-3.25 top-2 pointer-events-none text-gray-700 peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5 transition-all"
+          className="absolute text-xs left-3.25 top-2 pointer-events-none text-gray-700 dark:text-gray-50 peer-placeholder-shown:text-base peer-placeholder-shown:top-3.5 transition-all"
         >
           {placeholder}
         </label>

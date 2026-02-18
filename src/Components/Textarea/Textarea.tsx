@@ -22,7 +22,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           rows={3}
           placeholder="Escreva sua mensagem"
           className={cn(
-            "outline-none placeholder:text-slate-950 resize-none bg-white p-2 rounded-md w-full border-gray-500 text-gray-800 focus:border-gray-800 transition-all  border",
+            "outline-none placeholder:dark:text-woodsmoke-400 resize-none bg-gray-50 dark:bg-woodsmoke-900 p-2 rounded-md w-full border-gray-500 dark:border-woodsmoke-900 text-gray-800 dark:text-woodsmoke-400 focus:border-gray-800 transition-all  border placeholder:text-gray-800 ",
             error && " border-red-900 focus:border-red-900"
           )}
         />

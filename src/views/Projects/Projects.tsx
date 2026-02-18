@@ -32,10 +32,10 @@ const Projects = () => {
           )}
           ref={elementRef}
         >
-          <h2 className="font-bold text-4xl mb-10">Meus projetos</h2>
+          <h2 className="font-bold text-4xl mb-10 text-gray-950 dark:text-gray-300">Meus projetos</h2>
 
           <div className="flex items-center justify-center">
-            <div className="flex flex-wrap items-center justify-center w-[90%] gap-3">
+            <div className="flex flex-wrap items-center justify-center w-[90%] gap-3 ">
               {projects.map((project) => (
                 <article
                   className="bg-blue-700 h-72 w-44 rounded-lg flex flex-col justify-between items-center py-6   cursor-pointer md:h-80 md:w-48 bg-img hover:scale-105 transition-transform"

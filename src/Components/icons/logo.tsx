@@ -1,0 +1,28 @@
+import { cn } from "../../app/utils/cn/cn";
+
+
+
+const Logo = ({ className, ...props }: {className?: string}) => {
+  return (
+    <svg
+      viewBox="0 0 512 512"
+    fill="currentColor"
+      className={cn(
+        "text-black dark:text-white",
+        className
+      )}
+      {...props}
+    >
+      <g transform="translate(0,512) scale(0.1,-0.1)">
+        <path d="M1470 2556 l0 -1486 250 0 250 0 0 575 0 575 287 -2 287 -3 305 -570
+306 -570 253 -3 252 -2 0 51 c0 49 -17 81 -321 632 -177 320 -317 583 -312
+584 49 17 193 121 264 192 179 179 247 365 236 651 -6 169 -27 263 -88 386
+-114 232 -320 376 -639 446 -89 20 -132 21 -712 25 l-618 4 0 -1485z m1224
+1030 c223 -65 335 -218 336 -456 0 -190 -83 -331 -242 -411 -109 -55 -162 -62
+-503 -63 l-310 -1 -3 478 -2 479 332 -5 c276 -3 343 -7 392 -21z"/>
+      </g>
+    </svg>
+  );
+};
+
+export default Logo;

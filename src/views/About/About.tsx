@@ -45,10 +45,10 @@ const About = () => {
         </div>
 
         <div className="flex flex-col justify-center items-center lg:w-[50%] gap-4">
-          <h2 className="font-bold text-4xl mb-10">Sobre mim</h2>
+          <h2 className="font-bold text-4xl mb-10 text-gray-950 dark:text-gray-200">Sobre mim</h2>
 
           {aboutData.paragraphs.map((paragraph, index) => (
-            <p key={index} className="2xl:text-[1.2rem] ">
+            <p key={index} className="2xl:text-[1.2rem] text-woodsmoke-700 dark:text-woodsmoke-300">
               {renderParagraph(paragraph)}
             </p>
           ))}
