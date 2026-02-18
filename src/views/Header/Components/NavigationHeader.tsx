@@ -43,7 +43,7 @@ const NavigationHeader = ({
             className="hover:text-blue-300 transition-color"
             onClick={onClickNavigate}
           >
-            Skills
+            Habilidades
           </a>
         </li>
 

@@ -4,9 +4,28 @@ import { cn } from "../../app/utils/cn/cn";
 
 import imgCoding from "../../assets/defaults/Hand coding-bro.svg";
 import Container from "../../Components/Container/Container";
+import { aboutData } from "../../mock/about/About";
 
 const About = () => {
   const { isVisible, elementRef } = useIsVisibleItemOnScreen();
+
+   const renderParagraph = (text: string) => {
+    const words = text.split(" ");
+
+    return words.map((word, index) => {
+      const cleanWord = word.replace(/[.,]/g, "");
+
+      if (aboutData.highlightedTechnologies.includes(cleanWord)) {
+        return (
+          <strong key={index} className="font-semibold">
+            {word}{" "}
+          </strong>
+        );
+      }
+
+      return word + " ";
+    });
+  };
 
   return (
     <Container className="mt-6" id="about">
@@ -28,29 +47,11 @@ const About = () => {
         <div className="flex flex-col justify-center items-center lg:w-[50%] gap-4">
           <h2 className="font-bold text-4xl mb-10">Sobre mim</h2>
 
-          <p className="2xl:text-[1.2rem]">
-            Olá, meu nome é Rafael Achtenberg e tenho 15 anos. Sou um entusiasta
-            de programação, mergulhando no universo do desenvolvimento full
-            stack há alguns meses. Minha jornada começou com a intenção de
-            aprender e crescer nesse campo fascinante. Estou em busca da minha
-            primeira oportunidade profissional e dedicando meu tempo para
-            aprimorar minhas habilidades.
-          </p>
-
-          <p className="2xl:text-[1.2rem]">
-            Me considero uma pessoa colaborativa, acredito no poder do trabalho
-            em equipe e estou sempre disposto a contribuir para alcançar os
-            melhores resultados. Atualmente, estou imerso no estudo de
-            tecnologias como <strong>Next, Nestjs e React Native</strong>. Minha
-            determinação é permanecer em constante evolução tecnológica,
-            preparando-me para enfrentar novos desafios que possam surgir.
-          </p>
-
-          <p className="2xl:text-[1.2rem]">
-            Estou animado para explorar oportunidades e agregar valor a
-            projetos. Se precisar de um profissional comprometido, estou aqui
-            para colaborar.
-          </p>
+          {aboutData.paragraphs.map((paragraph, index) => (
+            <p key={index} className="2xl:text-[1.2rem] ">
+              {renderParagraph(paragraph)}
+            </p>
+          ))}
         </div>
       </section>
     </Container>
