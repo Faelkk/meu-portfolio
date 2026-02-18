@@ -15,7 +15,7 @@ const Footer = () => {
           target="_blank"
           className=" flex items-center  gap-3  ml-4"
         >
-          <div className="border-2 border-gray-950 p-[3px] rounded-full">
+          <div className="border-2 border-gray-950 p-0.75 rounded-full">
             <img src={logoIcon} className="w-6 h-6" alt="Logo" />
           </div>
           <span className="text-align: center">
