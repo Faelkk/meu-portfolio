@@ -1,42 +1,152 @@
+
+@import "tailwindcss";
+
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+    overflow-x: hidden;
+
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+@import "tailwindcss";
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@theme {
+
+  /* =========================
+     FONTS
+  ========================== */
+
+  --font-sans: "Roboto", sans-serif;
+
+
+  /* =========================
+     BREAKPOINTS
+  ========================== */
+
+  --breakpoint-minilg: 200px;
+  --breakpoint-minism: 300px;
+  --breakpoint-mini: 390px;
+  --breakpoint-sm: 430px;
+  --breakpoint-small: 530px;
+  --breakpoint-2sm: 600px;
+  --breakpoint-2md: 800px;
+  --breakpoint-minimum: 1000px;
+  --breakpoint-medium: 1400px;
+  --breakpoint-large: 1700px;
+  --breakpoint-3xl: 1900px;
+
+
+  /* =========================
+     COLORS - GRAY
+  ========================== */
+
+  --color-gray-50: #F8F9FA;
+  --color-gray-100: #F1F3F5;
+  --color-gray-200: #E9ECEF;
+  --color-gray-300: #DEE2E6;
+  --color-gray-400: #CED4DA;
+  --color-gray-500: #ADB5BD;
+  --color-gray-600: #868E96;
+  --color-gray-700: #495057;
+  --color-gray-800: #343A40;
+  --color-gray-900: #212529;
+
+
+  /* =========================
+     COLORS - BLUE
+  ========================== */
+
+  --color-blue-50: #f2f9f9;
+  --color-blue-100: #deeeef;
+  --color-blue-200: #c0dde1;
+  --color-blue-300: #94c4cc;
+  --color-blue-400: #61a3af;
+  --color-blue-500: #468794;
+  --color-blue-600: #3c6f7e;
+  --color-blue-700: #365c68;
+  --color-blue-800: #334e57;
+  --color-blue-900: #2e424b;
+  --color-blue-950: #1e3038;
+
+
+  /* =========================
+     ANIMATIONS
+  ========================== */
+
+  --animate-animate-skeleton: skeleton 1.5s linear infinite;
+
+  --animate-slideSideLeftAndFade:
+    slideSideLeftAndFade .5s cubic-bezier(0.16, 1, 0.3, 1);
+
+  --animate-overlayShow:
+    overlayShow .5s cubic-bezier(0.16, 1, 0.3, 1);
+
+  --animate-contentShow:
+    contentShow .5s cubic-bezier(0.16, 1, 0.3, 1);
+
+  --animate-startSlideDown: startSlideDown .5s;
+  --animate-startSlideLeft: startSlideLeft .5s;
+  --animate-startSlideRight: startSlideRight .5s;
+  --animate-slideMinimumDown: slideMinimumDown .5s;
+  --animate-startSlideTop: startSlideTop .5s;
+
+
+  /* =========================
+     KEYFRAMES
+  ========================== */
+
+  @keyframes skeleton {
+    from {
+      background-position: 0px;
+    }
+    to {
+      background-position: -200%;
+    }
   }
-  to {
-    transform: rotate(360deg);
+
+  @keyframes slideSideLeftAndFade {
+    from { opacity: 0; transform: translateX(-15%); }
+    to { opacity: 1; transform: translateX(0); }
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  @keyframes startSlideDown {
+    from { opacity: 0; transform: translateY(-50%); }
+    to { opacity: 1; transform: translateY(0); }
   }
-}
 
-.card {
-  padding: 2em;
-}
+  @keyframes startSlideRight {
+    from { opacity: 0; transform: translateX(15%); }
+    to { opacity: 1; transform: translateX(0); }
+  }
 
-.read-the-docs {
-  color: #888;
+  @keyframes startSlideLeft {
+    from { opacity: 0; transform: translateX(-15%); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes startSlideTop {
+    from { opacity: 0; transform: translateY(-15%); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideMinimumDown {
+    from { opacity: 0; transform: translateY(-15%); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes overlayShow {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes contentShow {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -48%) scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
 }
