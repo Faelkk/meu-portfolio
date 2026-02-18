@@ -26,7 +26,7 @@ const Modal = ({
   <Dialog.Root open={open} onOpenChange={onClose}>
     <Dialog.Portal>
       <Dialog.Overlay
-        className={cn("fixed inset-0  z-51   ", classNameOverlay)}
+        className={cn("fixed inset-0     ", classNameOverlay)}
       />
 
       <Dialog.Title className="text-xl font-bold mb-4">

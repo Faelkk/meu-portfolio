@@ -2,7 +2,8 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 import ImageDefaultModal from "../ImageDefaultModal/ImageDefaultModal";
 import type { Project } from "../../../../app/hooks/useProjects";
-import Modal from "../../../Modal/Modal";
+import Modal from "../../../../Components/Modal/Modal";
+
 
 
 interface ModalProjectsProps {
@@ -26,7 +27,7 @@ const ModalProjects = ({
           onClose={onCloseModal}
           open={isVisibleModal}
           classNameOverlay="backdrop-blur-sm  data-[state=open]:animate-overlayShow"
-          classNameContent="bg-slate-100 flex w-[80%] small:w-[50%]  md:w-[90%] h-[85%]  overflow-auto md:overflow-hidden  flex-col md:flex-row items-center md:max-w-[1100px]  md:h-auto fixed top-[50%] left-[50%]  translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-slate-100 p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none   data-[state=open]:animate-contentShow"
+          classNameContent="bg-slate-100 flex w-[80%] small:w-[50%]  md:w-[90%] h-[85%]  overflow-auto md:overflow-hidden  flex-col md:flex-row items-center md:max-w-[1100px]  md:h-auto fixed top-[50%] left-[50%]  translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-slate-100 p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none  "
         >
           <section className="flex items-stretch  gap-4 flex-col md:flex-row   w-full">
             <section className="flex p-5 rounded-md  flex-col items-center justify-center bg-[#e2e8f0] md:pb-3 md:px-0 ">

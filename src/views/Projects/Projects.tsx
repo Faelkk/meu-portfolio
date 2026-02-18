@@ -1,10 +1,11 @@
 import useProject from "./useProject";
 import ModalProjects from "./components/ModalProjects/ModalProjects";
-import useModal from "../Modal/useModal";
 import { useIsVisibleItemOnScreen } from "../../app/hooks/useIsVisibleItemOnScreen";
-import Loading from "../Loading/Loading";
-import Container from "../Container/Container";
+
 import { cn } from "../../app/utils/cn/cn";
+import Loading from "../../Components/Loading/Loading";
+import Container from "../../Components/Container/Container";
+import useModal from "../../Components/Modal/useModal";
 
 
 const Projects = () => {
