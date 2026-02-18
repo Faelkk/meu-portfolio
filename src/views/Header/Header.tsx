@@ -28,7 +28,7 @@ const Header = () => {
           rel="noopener noreferrer"
           className="flex items-center gap-3 ml-4"
         >
-          <figure className="border-2 border-gray-950 flex items-center rounded-full p-[3px]">
+          <figure className="border-2 border-gray-950 flex items-center rounded-full p-0.75">
             <img
               src={logoIcon}
               className="w-6 h-6 2xl:w-8 2xl:h-8"
