@@ -2,6 +2,7 @@
 import './App.css'
 import Projects from './Components/Projects/Projects'
 import About from './views/About/About'
+import Footer from './views/Footer/Footer'
 import Header from './views/Header/Header'
 import Intro from './views/Intro/Intro'
 import Skills from './views/Skills/Skills'
@@ -17,6 +18,7 @@ function App() {
       <About />
       <Skills />
       <Projects />
+      <Footer />
     </section>
   )
 }
