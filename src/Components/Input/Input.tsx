@@ -11,6 +11,7 @@ interface InputProps extends ComponentProps<"input"> {
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ name, id, placeholder, className, error, ...props }, ref) => {
+
     const inputId = id ?? name;
 
     return (
@@ -18,11 +19,11 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         <input
           ref={ref}
           name={name}
-          id={id}
+          id={inputId}
           {...props}
           placeholder=" "
           className={cn(
-            "bg-white dark:bg-woodsmoke-900 rounded-lg border border-gray-500 dark:border-woodsmoke-900 px-3 h-16 text-woodsmoke-800 w-full pt-4 peer placeholder-shown:pt-0  focus:border-gray-800 transition-all outline-none dark:text-woodsmoke-400 placeholder:dark:text-woodsmoke-400",
+            "bg-white dark:bg-woodsmoke-900 rounded-lg border border-gray-500 dark:border-woodsmoke-900 px-3 h-16 text-woodsmoke-800 w-full pt-4 peer placeholder-shown:pt-0 focus:border-gray-800 transition-all outline-none dark:text-woodsmoke-400 placeholder:dark:text-woodsmoke-400",
             error && "border-red-900 focus:border-red-900",
             className
           )}
@@ -37,12 +38,13 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         {error && (
           <div className="flex gap-2 items-center mt-2 text-red-900">
             <CrossCircledIcon />
-            <span className=" text-xs">{error}</span>
+            <span className="text-xs">{error}</span>
           </div>
         )}
       </div>
     );
   }
 );
+
 
 export default Input;
