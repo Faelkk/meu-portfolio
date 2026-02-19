@@ -1,75 +1,75 @@
-# React + TypeScript + Vite
+## 📖 Meu-portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfólio profissional desenvolvido com foco em performance, componentização e experiência do usuário (UX).
+A aplicação apresenta meus projetos, habilidades técnicas e trajetória como desenvolvedor Frontend, utilizando tecnologias modernas do ecossistema React.
 
-Currently, two official plugins are available:
+O objetivo deste projeto é demonstrar boas práticas de arquitetura, organização de código e desenvolvimento escalável.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎨 Tecnologias Utilizadas
 
-## React Compiler
+- [React 19](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Zod](https://zod.dev/)
+- [Zustand](https://zustand-demo.pmnd.rs/)
+- [Radix UI](https://www.radix-ui.com/)
+- [React-Hook-Foom](https://react-hook-form.com/)
+- [React-Hot-Toast](https://react-hot-toast.com/)
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
 
-Note: This will impact Vite dev & build performances.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📸 Prévia da Interface
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Abaixo algumas prévias principais da aplicação:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Tela de Apresentação
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+![Tela de apresentação](/public/docs/intro.png)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Tela de Sobre
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+![Tela de sobre](/public/docs/sobre.png)
+
+### Tela de Habilidades
+
+![Tela de habilidades](/public/docs/habilidades.png)
+
+### Tela de Projetos
+
+![Tela de projetos](/public/docs/projetos.png)
+
+### Tela de Contato
+
+![Tela de contato](/public/docs/contato.png)
+
+## 🚀 Como Rodar o Projeto
+
+1.  **Clone o Repositório:**
+
+    ```bash
+    git clone https://github.com/Faelkk/meu-portfolio
+    ```
+
+2.  **Instalar as Dependências**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Rodar o Projeto**
+
+    ```bash
+    npm run start
+    ```
+
+🤝 **Como Contribuir?**
+
+- ⭐ Deixe uma estrela no repositório.
+- 🔗 Me siga aqui no GitHub.
+- 👥 Conecte-se comigo no LinkedIn e faça parte da minha rede profissional.
+
+👨‍💻**Autor**
+Desenvolvido por [Rafael Achtenberg](linkedin.com/in/rafael-achtenberg-7a4b12284/).

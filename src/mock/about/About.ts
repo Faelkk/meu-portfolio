@@ -3,14 +3,25 @@ export interface AboutData {
   highlightedTechnologies: string[];
 }
 
-
 export const aboutData: AboutData = {
   paragraphs: [
-    "Olá, meu nome é Rafael Achtenberg e tenho 18 anos. Sou um entusiasta de programação, mergulhando no universo do desenvolvimento full stack há alguns meses. Minha jornada começou com a intenção de aprender e crescer nesse campo fascinante. Estou em busca da minha primeira oportunidade profissional e dedicando meu tempo para aprimorar minhas habilidades.",
+    "Olá, meu nome é Rafael Achtenberg, tenho 18 anos e sou estudante de Análise e Desenvolvimento de Sistemas na PUCRS. Sou desenvolvedor de software com foco em ASP.NET e TypeScript, buscando minha primeira oportunidade formal na área. Atualmente atuo em projetos pessoais e freelances, desenvolvendo soluções completas com foco em performance, organização e boas práticas.",
 
-    "Me considero uma pessoa colaborativa, acredito no poder do trabalho em equipe e estou sempre disposto a contribuir para alcançar os melhores resultados. Atualmente, estou imerso no estudo de tecnologias como C#, Typescript e Minha determinação é permanecer em constante evolução tecnológica, preparando-me para enfrentar novos desafios que possam surgir.",
+    "Possuo conhecimento avançado em C# e TypeScript, com experiência na criação de APIs e interfaces utilizando React, Next.js, Angular, ASP.NET, Express, NestJS. Tenho familiaridade com arquitetura de microsserviços, Clean Architecture, Testes Automatizados, Docker, Kubernetes, mensageria e práticas como SOLID, DRY e KISS.",
 
-    "Estou animado para explorar oportunidades e agregar valor a projetos. Se precisar de um profissional comprometido, estou aqui para colaborar."
+    "Também possuo experiência com bancos de dados relacionais (PostgreSQL, MySQL e SQL Server) e não relacionais (MongoDB e Redis para cache). Tenho inglês avançado (C1 – conversação) e me considero uma pessoa comunicativa, comprometida e criativa, sempre buscando evolução constante e novos desafios."
   ],
-  highlightedTechnologies: ["C#", "Typescript", ""],
+  highlightedTechnologies: [
+    "C#",
+    "TypeScript",
+    "ASP.NET",
+    "React",
+    "Next.js",
+    "Angular",
+    "Node.js",
+    "Docker",
+    "Testes",
+    "Automatizados",
+    "PostgreSQL"
+  ],
 };
