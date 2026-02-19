@@ -30,31 +30,37 @@ const ModalProjects = ({
         >
           <section className="flex items-stretch  gap-4 flex-col md:flex-row   w-full">
             <section className="flex p-5 rounded-md  flex-col items-center justify-center bg-gray-300 dark:bg-woodsmoke-800 md:pb-3 md:px-0 ">
-              <section className="w-full md:h-96 md:w-60 flex  justify-center ">
+
+                {projectModal.cardimage?.trim() ?  <>
+                  <section className="w-full md:h-96 md:w-60 flex  justify-center ">
                 <img
                   src={projectModal.cardimage}
                   className=" h-21 w-[70%] md:h-full object-contain "
                 />
               </section>
+                </>  : 
+                 <section className="w-full md:h-96 md:w-60 flex  justify-center "> <span className="w-[70%] md:h-full object-contain  flex items-center justify-center  text-woodsmoke-500">Sem imagem.</span></section>
+                }
+            
 
-              <h2 className=" mt-2 r text-2xl font-bold text-blue-800 dark:text-blue-500">
+              <h2 className=" mt-2 r text-xl font-bold text-blue-800 dark:text-blue-500 text-center">
                 {projectModal?.name}
               </h2>
 
               <a
                 href={projectModal.url}
-                className="w-full flex justify-center"
+                className="w-full flex justify-center cursor-pointer"
                 target="_blank"
               >
-                <button className="mt-2 rounded-lg bg-blue-600 p-2 w-[80%] text-slate-100  text-xl font-bold ">
+                <button className="mt-2 rounded-lg bg-blue-600 p-2 w-[80%] text-slate-100  text-xl font-bold cursor-pointer">
                   Deploy
                 </button>
               </a>
             </section>
 
             <section className="flex gap-2   flex-col max-w-225  md:mt-0 justify-between w-full">
-              <a
-                className="cursor-pointer "
+             {projectModal.defaultimage?.trim() ?  <a
+                className="cursor-pointer"
                 target="_blank"
                 href={projectModal.url}
               >
@@ -65,12 +71,16 @@ const ModalProjects = ({
                     alt={projectModal.name!}
                   />
                 </figure>
-              </a>
+              </a> : <div className="flex items-center h-full w-full justify-center">
+                <span className="text-woodsmoke-500">Sem imagem.</span></div>}
 
               <div className="bg-gray-300 dark:bg-woodsmoke-800  my-3 md:my-0 flex flex-col gap-6  p-3 ">
-                <p className="text-sm px-3 mt-3 md:h-35 flex h-full w-full   text-woodsmoke-900 dark:text-woodsmoke-200 ">
-                  {projectModal?.description}
-                </p>
+                <p className="text-sm px-3 mt-3 
+              text-woodsmoke-700 dark:text-woodsmoke-300 
+              line-clamp-3">
+  {projectModal?.description}
+</p>
+
 
                 <section className="flex gap-2 relative">
                   <section className="flex gap-2">
@@ -86,7 +96,7 @@ const ModalProjects = ({
                       })}
                   </section>
 
-                  <button className="absolute right-0 ">
+                  <button className="absolute right-0 cursor-pointer">
                     <a href={projectModal.urlGithub} target="_blank">
                       <GitHubLogoIcon className="w-8 h-8 text-woodsmoke-900 dark:text-gray-50" />
                     </a>

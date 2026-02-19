@@ -7,7 +7,6 @@ import Loading from "../../Components/Loading/Loading";
 import Container from "../../Components/Container/Container";
 import useModal from "../../Components/Modal/useModal";
 
-
 const Projects = () => {
   const { isVisibleModal, handleOpenModal, handleCloseModal } = useModal();
   const { projectModal, projects, isLoading, handleClickProject } =
@@ -28,31 +27,34 @@ const Projects = () => {
         <section
           className={cn(
             "flex flex-col items-center w-full",
-            isVisible ? "animate-slideSideLeftAndFade" : ""
+            isVisible ? "animate-slideSideLeftAndFade" : "",
           )}
           ref={elementRef}
         >
-          <h2 className="font-bold text-4xl mb-10 text-gray-950 dark:text-gray-300">Meus projetos</h2>
+          <h2 className="font-bold text-4xl mb-10 text-gray-950 dark:text-gray-300">
+            Meus projetos
+          </h2>
 
           <div className="flex items-center justify-center min-w-full">
             <div className="flex flex-wrap items-center justify-center w-[90%] gap-3 ">
               {projects.map((project) => (
                 <article
-                  className="bg-blue-700 h-72 w-44 rounded-lg flex flex-col justify-between items-center py-6   cursor-pointer md:h-80 md:w-48 bg-img hover:scale-105 transition-transform"
+                  className="bg-blue-700 h-80 w-[80%] h- rounded-lg flex flex-col justify-between items-center py-6  px-6  cursor-pointer md:h-80  small:w-auto md:w-52 bg-img hover:scale-105 transition-transform"
                   key={project.name}
                   onClick={() => handleClickProject(project)}
                 >
-                  <h3 className="text-xl font-bold text-slate-50">
+                  <h2 className=" font-bold text-slate-50 text-xl small:text-base text-center">
                     {project.name}
-                  </h3>
+                  </h2>
 
-                  <img
-                    src={project.cardimage}
-                    className="w-25  pointer-events-none select-none"
-                    alt={`${project.name} project`}
-                  />
-
-                  <button className="bg-slate-50 w-28 py-1 rounded-lg text-blue-950 font-semibold">
+                  {project.cardimage?.trim() ? (
+                    <img
+                      src={project.cardimage}
+                      className="w-25 pointer-events-none select-none"
+                      alt={`${project.name} project`}
+                    />
+                  ) : null}
+                  <button className="bg-slate-50 min:w-28  p-2 rounded-lg text-blue-950 font-semibold w-full">
                     Ver mais
                   </button>
                 </article>

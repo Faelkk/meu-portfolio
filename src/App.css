@@ -1,26 +1,14 @@
-
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
 body {
-  overflow-x: hidden
+  overflow-x: hidden;
 }
-
 
 @import "tailwindcss";
 
 @theme {
-
-  /* =========================
-     FONTS
-  ========================== */
-
   --font-sans: "Roboto", sans-serif;
-
-
-  /* =========================
-     BREAKPOINTS
-  ========================== */
 
   --breakpoint-minilg: 200px;
   --breakpoint-minism: 300px;
@@ -34,26 +22,16 @@ body {
   --breakpoint-large: 1700px;
   --breakpoint-3xl: 1900px;
 
-
-  /* =========================
-     COLORS - GRAY
-  ========================== */
-
-  --color-gray-50: #F8F9FA;
-  --color-gray-100: #F1F3F5;
-  --color-gray-200: #E9ECEF;
-  --color-gray-300: #DEE2E6;
-  --color-gray-400: #CED4DA;
-  --color-gray-500: #ADB5BD;
-  --color-gray-600: #868E96;
+  --color-gray-50: #f8f9fa;
+  --color-gray-100: #f1f3f5;
+  --color-gray-200: #e9ecef;
+  --color-gray-300: #dee2e6;
+  --color-gray-400: #ced4da;
+  --color-gray-500: #adb5bd;
+  --color-gray-600: #868e96;
   --color-gray-700: #495057;
-  --color-gray-800: #343A40;
+  --color-gray-800: #343a40;
   --color-gray-900: #212529;
-
-
-  /* =========================
-     COLORS - BLUE
-  ========================== */
 
   --color-blue-50: #f2f9f9;
   --color-blue-100: #deeeef;
@@ -67,62 +45,48 @@ body {
   --color-blue-900: #2e424b;
   --color-blue-950: #1e3038;
 
+  --color-bluevariant-text: #3a78ff --color-mirage-50: #f4f6fb;
+  --color-mirage-100: #e7ecf7;
+  --color-mirage-200: #cad7ed;
+  --color-mirage-300: #9bb4de;
+  --color-mirage-400: #668dca;
+  --color-mirage-500: #426fb5;
+  --color-mirage-600: #315798;
+  --color-mirage-700: #29467b;
+  --color-mirage-800: #253c67;
+  --color-mirage-900: #233557;
+  --color-mirage-950: #101727;
 
---color-bluevariant-text:#3A78FF
-
-
---color-mirage-50: #f4f6fb;
---color-mirage-100: #e7ecf7;
---color-mirage-200: #cad7ed;
---color-mirage-300: #9bb4de;
---color-mirage-400: #668dca;
---color-mirage-500: #426fb5;
---color-mirage-600: #315798;
---color-mirage-700: #29467b;
---color-mirage-800: #253c67;
---color-mirage-900: #233557;
---color-mirage-950: #101727;
-
-
---color-woodsmoke-50: #fafafa;
---color-woodsmoke-100: #f5f5f5;
---color-woodsmoke-200: #e6e6e6;
---color-woodsmoke-300: #d3d3d3;
---color-woodsmoke-400: #a3a3a3;
---color-woodsmoke-500: #727272;
---color-woodsmoke-600: #535353;
---color-woodsmoke-700: #404040;
---color-woodsmoke-800: #272727;
---color-woodsmoke-900: #1b1b1b;
---color-woodsmoke-950: #0b0b0b;
+  --color-woodsmoke-50: #fafafa;
+  --color-woodsmoke-100: #f5f5f5;
+  --color-woodsmoke-200: #e6e6e6;
+  --color-woodsmoke-300: #d3d3d3;
+  --color-woodsmoke-400: #a3a3a3;
+  --color-woodsmoke-500: #727272;
+  --color-woodsmoke-600: #535353;
+  --color-woodsmoke-700: #404040;
+  --color-woodsmoke-800: #272727;
+  --color-woodsmoke-900: #1b1b1b;
+  --color-woodsmoke-950: #0b0b0b;
 
 
-
-  /* =========================
-     ANIMATIONS
-  ========================== */
 
   --animate-animate-skeleton: skeleton 1.5s linear infinite;
 
-  --animate-slideSideLeftAndFade:
-    slideSideLeftAndFade .5s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-slideSideLeftAndFade: slideSideLeftAndFade 0.5s
+    cubic-bezier(0.16, 1, 0.3, 1);
 
-  --animate-overlayShow:
-    overlayShow .5s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-overlayShow: overlayShow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 
-  --animate-contentShow:
-    contentShow .5s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-contentShow: contentShow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 
-  --animate-startSlideDown: startSlideDown .5s;
-  --animate-startSlideLeft: startSlideLeft .5s;
-  --animate-startSlideRight: startSlideRight .5s;
-  --animate-slideMinimumDown: slideMinimumDown .5s;
-  --animate-startSlideTop: startSlideTop .5s;
+  --animate-startSlideDown: startSlideDown 0.5s;
+  --animate-startSlideLeft: startSlideLeft 0.5s;
+  --animate-startSlideRight: startSlideRight 0.5s;
+  --animate-slideMinimumDown: slideMinimumDown 0.5s;
+  --animate-startSlideTop: startSlideTop 0.5s;
 
 
-  /* =========================
-     KEYFRAMES
-  ========================== */
 
   @keyframes skeleton {
     from {
@@ -134,38 +98,78 @@ body {
   }
 
   @keyframes slideSideLeftAndFade {
-    from { opacity: 0; transform: translateX(-15%); }
-    to { opacity: 1; transform: translateX(0); }
+    from {
+      opacity: 0;
+      transform: translateX(-15%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 
   @keyframes startSlideDown {
-    from { opacity: 0; transform: translateY(-50%); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   @keyframes startSlideRight {
-    from { opacity: 0; transform: translateX(15%); }
-    to { opacity: 1; transform: translateX(0); }
+    from {
+      opacity: 0;
+      transform: translateX(15%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 
   @keyframes startSlideLeft {
-    from { opacity: 0; transform: translateX(-15%); }
-    to { opacity: 1; transform: translateX(0); }
+    from {
+      opacity: 0;
+      transform: translateX(-15%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 
   @keyframes startSlideTop {
-    from { opacity: 0; transform: translateY(-15%); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(-15%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   @keyframes slideMinimumDown {
-    from { opacity: 0; transform: translateY(-15%); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(-15%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   @keyframes overlayShow {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   @keyframes contentShow {
@@ -178,5 +182,4 @@ body {
       transform: translate(-50%, -50%) scale(1);
     }
   }
-
 }
