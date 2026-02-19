@@ -1,6 +1,7 @@
 
 import './App.css'
 import About from './views/About/About'
+import ButtonScrollTop from './views/BtnTop/Button'
 import Contact from './views/Contact/Contact'
 import Footer from './views/Footer/Footer'
 import Header from './views/Header/Header'
@@ -21,6 +22,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
+      <ButtonScrollTop />
     </section>
   )
 }

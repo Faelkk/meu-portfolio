@@ -11,11 +11,8 @@ O objetivo deste projeto é demonstrar boas práticas de arquitetura, organizaç
 - [Vite](https://vitejs.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [TailwindCSS](https://tailwindcss.com/)
-- [Zod](https://zod.dev/)
 - [Zustand](https://zustand-demo.pmnd.rs/)
 - [Radix UI](https://www.radix-ui.com/)
-- [React-Hook-Foom](https://react-hook-form.com/)
-- [React-Hot-Toast](https://react-hot-toast.com/)
 
 
 
