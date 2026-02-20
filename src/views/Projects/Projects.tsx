@@ -14,7 +14,6 @@ const Projects = () => {
   const { isVisible, elementRef } = useIsVisibleItemOnScreen();
 
 
-  console.log(projects,"project log card");
 
   if (isLoading)
     return (

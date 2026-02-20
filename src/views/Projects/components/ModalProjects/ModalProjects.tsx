@@ -20,8 +20,6 @@ const ModalProjects = ({
   if (projectModal) {
 
 
-    console.log("projects", projectModal);
-
     return (
       projectModal && (
         <Modal
