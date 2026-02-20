@@ -19,6 +19,9 @@ const ModalProjects = ({
 }: ModalProjectsProps) => {
   if (projectModal) {
 
+
+    console.log("projects", projectModal);
+
     return (
       projectModal && (
         <Modal

@@ -13,6 +13,9 @@ const Projects = () => {
     useProject(handleOpenModal);
   const { isVisible, elementRef } = useIsVisibleItemOnScreen();
 
+
+  console.log(projects,"project log card");
+
   if (isLoading)
     return (
       <div className="my-8">
@@ -50,7 +53,7 @@ const Projects = () => {
                   {project.cardimage?.trim() ? (
                     <img
                       src={project.cardimage}
-                      className="w-25 pointer-events-none select-none"
+                      className="w-25 pointer-events-none select-none text-white"
                       alt={`${project.name} project`}
                     />
                   ) : null}
