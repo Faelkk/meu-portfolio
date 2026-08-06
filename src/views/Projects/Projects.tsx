@@ -18,7 +18,7 @@ const Projects = () => {
       <section className="w-full max-w-7xl px-6 lg:px-10">
         <div className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
-            <h2 className="section-title">Trabalho selecionado.</h2>
+            <h2 className="section-title">Projetos.</h2>
           </div>
           <a className="text-link" href="https://github.com/Faelkk?tab=repositories" target="_blank" rel="noreferrer">
             Ver todos no GitHub <ArrowTopRightIcon />
