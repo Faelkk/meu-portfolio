@@ -1,59 +1,32 @@
-import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-
-
-
+import { ArrowTopRightIcon, GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import Container from "../../Components/Container/Container";
-import { useIsVisibleItemOnScreen } from "../../app/hooks/useIsVisibleItemOnScreen";
-import { cn } from "../../app/utils/cn/cn";
-import Email from "../../Components/icons/email";
 
 const Contact = () => {
-  const { isVisible, elementRef } = useIsVisibleItemOnScreen();
-
   return (
-    <Container className="my-20" id="contact">
-      <section className={cn('flex flex-col items-start justify-center w-[90%] min-h-96 bg-gray-200 dark:bg-woodsmoke-800 rounded-md p-5', isVisible ? 'animate-startSlideRight' : '')} ref={elementRef}>
-
-          <h2 className="font-bold text-4xl mb-6 text-gray-950 dark:text-gray-300 text-start">Entre em contato Comigo</h2>
-
-          <div className="flex flex-col justify-between gap-6 flex-1">
-            <p className="text-md text-woodsmoke-900 dark:text-woodsmoke-400 mt-5 text-xl">
-              Procurando por um desenvolvedor ou gostaria de compartilhar seu
-              feedback? Fique à vontade para entrar em contato comigo! Estou
-              empolgado para responder e ajudar o mais rápido possível. Utilize
-              qualquer um dos métodos abaixo para se conectar comigo.
-            </p>
-
-            <nav className="flex gap-4">
-              <a
-                href="https://github.com/Faelkk"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:scale-105 transition"
-              >
-                <GitHubLogoIcon className={cn("w-8 h-8 text-woodsmoke-950 dark:text-gray-50")} />
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/rafael-achtenberg-7a4b12284/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:scale-105 transition"
-              >
-                <LinkedInLogoIcon className={cn("w-8 h-8 text-woodsmoke-950 dark:text-gray-50")} />
-              </a>
-
-              <a
-                href="mailto:achtenberg.rafa@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:scale-105 transition"
-              >
-              <Email className="w-8 h-8 text-woodsmoke-950 dark:text-gray-50" />
-              </a>
-            </nav>
+    <Container className="section-shell px-6 md:px-10" id="contact">
+      <section className="contact-panel relative w-full max-w-7xl">
+        <div className="contact-panel-copy w-full">
+          <div className="contact-panel-heading">
+            <h2 className="text-[clamp(3rem,7vw,6.8rem)] font-semibold leading-[.95] tracking-[-0.065em] text-gray-950 dark:text-white">
+              Vamos conversar.
+            </h2>
           </div>
 
+          <div className="contact-panel-actions">
+            <p className="max-w-xl text-lg leading-8 text-gray-600 dark:text-gray-300 md:text-xl">
+              Se você precisa de alguém que pense no produto e entregue o código, me conte o contexto. Respondo direto, sem formulário.
+            </p>
+
+            <a className="contact-email mt-10" href="mailto:achtenberg.rafa@gmail.com">
+              achtenberg.rafa@gmail.com <ArrowTopRightIcon />
+            </a>
+
+            <nav className="mt-12 flex gap-3" aria-label="Redes sociais">
+              <a className="contact-social" href="https://github.com/Faelkk" target="_blank" rel="noreferrer"><GitHubLogoIcon /> GitHub</a>
+              <a className="contact-social" href="https://www.linkedin.com/in/achtenrafael/" target="_blank" rel="noreferrer"><LinkedInLogoIcon /> LinkedIn</a>
+            </nav>
+          </div>
+        </div>
       </section>
     </Container>
   );
