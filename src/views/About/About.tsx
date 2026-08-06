@@ -1,57 +1,34 @@
-
-import { useIsVisibleItemOnScreen } from "../../app/hooks/useIsVisibleItemOnScreen";
-import { cn } from "../../app/utils/cn/cn";
-
-import imgCoding from "../../assets/defaults/Hand coding-bro.svg";
 import Container from "../../Components/Container/Container";
-import { aboutData } from "../../mock/about/About";
 
 const About = () => {
-  const { isVisible, elementRef } = useIsVisibleItemOnScreen();
-
-   const renderParagraph = (text: string) => {
-    const words = text.split(" ");
-
-    return words.map((word, index) => {
-      const cleanWord = word.replace(/[.,]/g, "");
-
-      if (aboutData.highlightedTechnologies.includes(cleanWord)) {
-        return (
-          <strong key={index} className="font-semibold">
-            {word}{" "}
-          </strong>
-        );
-      }
-
-      return word + " ";
-    });
-  };
-
   return (
-    <Container className="mt-6" id="about">
-      <section
-        ref={elementRef}
-        className={cn(
-          "flex md:justify-between items-center w-[90%]",
-          isVisible ? "animate-startSlideRight" : ""
-        )}
-      >
-        <div className="hidden md:w-[50%] md:max-w-[50%] md:h-full lg:flex">
-          <img
-            src={imgCoding}
-            className="lg:w-100 2xl:w-175 2xl:h-150"
-            alt="Imagem de Coding"
-          />
+    <Container className="section-shell" id="about">
+      <section className="grid w-full max-w-7xl gap-12 px-6 lg:grid-cols-[.7fr_1.3fr] lg:gap-24 lg:px-10">
+        <div>
+          <h2 className="section-title">Código com visão de produto.</h2>
         </div>
 
-        <div className="flex flex-col justify-center items-center lg:w-[50%] gap-4">
-          <h2 className="font-bold text-4xl mb-10 text-gray-950 dark:text-gray-200">Sobre mim</h2>
+        <div className="space-y-8">
+          <p className="text-2xl font-medium leading-snug tracking-tight text-gray-900 dark:text-gray-100 md:text-3xl">
+            Não entrego apenas telas ou endpoints. Entendo o contexto, tomo decisões técnicas e acompanho a solução até ela funcionar em produção.
+          </p>
+          <p className="max-w-3xl text-base leading-8 text-gray-600 dark:text-gray-400 md:text-lg">
+            Atuo no desenvolvimento de interfaces, APIs, regras de negócio e integrações. Tenho experiência com sistemas orientados a dados, processamento assíncrono, IA, mensageria e infraestrutura em nuvem. Sempre equilibrando velocidade, qualidade e manutenção.
+          </p>
 
-          {aboutData.paragraphs.map((paragraph, index) => (
-            <p key={index} className="2xl:text-[1.2rem] text-woodsmoke-700 dark:text-woodsmoke-300">
-              {renderParagraph(paragraph)}
-            </p>
-          ))}
+          <div className="grid gap-4 sm:grid-cols-3">
+            {[
+              ["01", "Produto", "Clareza sobre o problema antes da solução."],
+              ["02", "Arquitetura", "Soluções simples, robustas e fáceis de evoluir."],
+              ["03", "Entrega", "Deploy, observabilidade e melhoria contínua."],
+            ].map(([number, title, copy]) => (
+              <article className="principle-card" key={number}>
+                <span>{number}</span>
+                <h3>{title}</h3>
+                <p>{copy}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
     </Container>

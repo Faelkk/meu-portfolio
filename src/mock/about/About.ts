@@ -5,23 +5,28 @@ export interface AboutData {
 
 export const aboutData: AboutData = {
   paragraphs: [
-    "Olá, meu nome é Rafael Achtenberg, tenho 18 anos e sou estudante de Análise e Desenvolvimento de Sistemas na PUCRS. Sou desenvolvedor de software com foco em ASP.NET e TypeScript, buscando minha primeira oportunidade formal na área. Atualmente atuo em projetos pessoais e freelances, desenvolvendo soluções completas com foco em performance, organização e boas práticas.",
+    "Desenvolvedor de software com atuação full stack na construção e evolução de aplicações modernas, escaláveis e orientadas a dados, utilizando TypeScript, React, Next.js, Node.js, C#, ASP.NET e Prisma ORM. Experiência com bancos de dados relacionais e não relacionais, incluindo PostgreSQL, MySQL, SQL Server, MongoDB e Redis.",
 
-    "Possuo conhecimento avançado em C# e TypeScript, com experiência na criação de APIs e interfaces utilizando React, Next.js, Angular, ASP.NET, Express, NestJS. Tenho familiaridade com arquitetura de microsserviços, Clean Architecture, Testes Automatizados, Docker, Kubernetes, mensageria e práticas como SOLID, DRY e KISS.",
+    "Experiência no desenvolvimento de interfaces, APIs, regras de negócio e integrações com serviços externos, além da otimização de consultas e implementação de testes automatizados. Atuação também em funcionalidades baseadas em inteligência artificial, utilizando filas, jobs e workflows assíncronos para processamento, persistência de resultados, retentativas e tratamento de falhas.",
 
-    "Também possuo experiência com bancos de dados relacionais (PostgreSQL, MySQL e SQL Server) e não relacionais (MongoDB e Redis para cache). Tenho inglês avançado (C1 – conversação) e me considero uma pessoa comunicativa, comprometida e criativa, sempre buscando evolução constante e novos desafios."
+    "Participação em entregas ponta a ponta, desde a análise e implementação até testes, deploy e acompanhamento em produção, com experiência em Docker, CI/CD, Amazon Web Services, Vercel, PostHog e mensageria. Trabalho próximo ao produto e ao time, buscando equilibrar agilidade, qualidade técnica e facilidade de manutenção. Inglês avançado (B2), incluindo conversação."
   ],
   highlightedTechnologies: [
-    "C#",
     "TypeScript",
-    "ASP.NET",
     "React",
     "Next.js",
-    "Angular",
     "Node.js",
+    "C#",
+    "ASP.NET",
+    "Prisma",
+    "PostgreSQL",
+    "MySQL",
+    "SQL",
+    "MongoDB",
+    "Redis",
     "Docker",
-    "Testes",
-    "Automatizados",
-    "PostgreSQL"
+    "CI/CD",
+    "Vercel",
+    "PostHog"
   ],
 };
