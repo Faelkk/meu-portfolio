@@ -1,78 +1,68 @@
+import { ArrowTopRightIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
+import Container from "../../Components/Container/Container";
+import Loading from "../../Components/Loading/Loading";
 import useProject from "./useProject";
 import ModalProjects from "./components/ModalProjects/ModalProjects";
-import { useIsVisibleItemOnScreen } from "../../app/hooks/useIsVisibleItemOnScreen";
-
-import { cn } from "../../app/utils/cn/cn";
-import Loading from "../../Components/Loading/Loading";
-import Container from "../../Components/Container/Container";
 import useModal from "../../Components/Modal/useModal";
 
 const Projects = () => {
   const { isVisibleModal, handleOpenModal, handleCloseModal } = useModal();
-  const { projectModal, projects, isLoading, handleClickProject } =
-    useProject(handleOpenModal);
-  const { isVisible, elementRef } = useIsVisibleItemOnScreen();
+  const { projectModal, projects, isLoading, handleClickProject } = useProject(handleOpenModal);
 
+  if (isLoading) return <Loading isLoading={isLoading} />;
 
+  const allProjects = projects ?? [];
 
-  if (isLoading)
-    return (
-      <div className="my-8">
-        {" "}
-        <Loading isLoading={isLoading} />{" "}
-      </div>
-    );
-
-  if (projects && !isLoading) {
-    return (
-      <Container className="mt-6" id="projects">
-        <section
-          className={cn(
-            "flex flex-col items-center w-full",
-            isVisible ? "animate-slideSideLeftAndFade" : "",
-          )}
-          ref={elementRef}
-        >
-          <h2 className="font-bold text-4xl mb-10 text-gray-950 dark:text-gray-300">
-            Meus projetos
-          </h2>
-
-          <div className="flex items-center justify-center min-w-full">
-            <div className="flex flex-wrap items-center justify-center w-[90%] gap-3 ">
-              {projects.map((project) => (
-                <article
-                  className="bg-blue-700 h-80 w-[80%] h- rounded-lg flex flex-col justify-between items-center py-6  px-6  cursor-pointer md:h-80  small:w-auto md:w-52 bg-img hover:scale-105 transition-transform"
-                  key={project.name}
-                  onClick={() => handleClickProject(project)}
-                >
-                  <h2 className=" font-bold text-slate-50 text-xl small:text-base text-center">
-                    {project.name}
-                  </h2>
-
-                  {project.cardimage?.trim() ? (
-                    <img
-                      src={project.cardimage}
-                      className="w-25 pointer-events-none select-none text-white"
-                      alt={`${project.name} project`}
-                    />
-                  ) : null}
-                  <button className="bg-slate-50 min:w-28  p-2 rounded-lg text-blue-950 font-semibold w-full">
-                    Ver mais
-                  </button>
-                </article>
-              ))}
-            </div>
+  return (
+    <Container className="section-shell" id="projects">
+      <section className="w-full max-w-7xl px-6 lg:px-10">
+        <div className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div>
+            <h2 className="section-title">Trabalho selecionado.</h2>
           </div>
-        </section>
+          <a className="text-link" href="https://github.com/Faelkk?tab=repositories" target="_blank" rel="noreferrer">
+            Ver todos no GitHub <ArrowTopRightIcon />
+          </a>
+        </div>
 
-        <ModalProjects
-          projectModal={projectModal}
-          onCloseModal={handleCloseModal}
-          isVisibleModal={isVisibleModal}
-        />
-      </Container>
-    );
-  }
+        <div className="grid gap-5 md:grid-cols-2">
+          {allProjects.map((project, index) => (
+            <article className="project-card group" key={project.name}>
+              <button className="project-preview" onClick={() => handleClickProject(project)} aria-label={`Ver detalhes de ${project.name}`}>
+                <span className="project-number">{String(index + 1).padStart(2, "0")}</span>
+                {project.defaultimage?.trim() ? (
+                  <img src={project.defaultimage} alt={`Interface do projeto ${project.name}`} />
+                ) : (
+                  <img className="project-logo" src={project.cardimage} alt="" />
+                )}
+              </button>
+              <div className="p-6 md:p-8">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="text-2xl font-semibold tracking-tight text-gray-950 dark:text-white">{project.name}</h3>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {project.technologies?.slice(0, 4).map((technology) => (
+                        <span className="project-tag" key={technology.name}>{technology.name}</span>
+                      ))}
+                    </div>
+                  </div>
+                  <a className="icon-link" href={project.urlGithub} target="_blank" rel="noreferrer" aria-label={`GitHub de ${project.name}`}>
+                    <GitHubLogoIcon />
+                  </a>
+                </div>
+                <p className="mt-5 line-clamp-2 leading-7 text-gray-600 dark:text-gray-400">{project.description}</p>
+                <button className="mt-6 text-link" onClick={() => handleClickProject(project)}>
+                  Explorar projeto <ArrowTopRightIcon />
+                </button>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <ModalProjects projectModal={projectModal} onCloseModal={handleCloseModal} isVisibleModal={isVisibleModal} />
+      </section>
+    </Container>
+  );
 };
 
 export default Projects;

@@ -26,13 +26,8 @@ const ImageSkeleton = ({ src, alt, className }: ImageSkeletonProps) => {
   size
   animate-pulse 
   transition
-  bg-linear-to-r 
-  from-gray-300 
-  via-white 
-  to-gray-300
-  dark:from-woodsmoke-800
-  dark:via-woodsmoke-800
-  dark:to-woodsmoke-800
+  bg-gray-300
+  dark:bg-woodsmoke-800
 "
 
           style={{ backgroundSize: "200%", gridArea: "1/1" }}
