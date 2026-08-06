@@ -24,23 +24,29 @@ Abaixo algumas prévias principais da aplicação:
 
 ### Tela de Apresentação
 
-![Tela de apresentação](/public/docs/intro.png)
+![Tela de apresentação](public/docs/intro.png)
 
 ### Tela de Sobre
 
-![Tela de sobre](/public/docs/sobre.png)
+![Tela de sobre](public/docs/sobre.png)
+
+### Tela de Experiência
+
+![Tela de experiência profissional](public/docs/experiencia.png)
 
 ### Tela de Habilidades
 
-![Tela de habilidades](/public/docs/habilidades.png)
+![Tela de habilidades](public/docs/habilidades.png)
 
 ### Tela de Projetos
 
-![Tela de projetos](/public/docs/projetos.png)
+![Tela de projetos](public/docs/projetos.png)
+
+![Continuação da tela de projetos](public/docs/projetos-continuacao.png)
 
 ### Tela de Contato
 
-![Tela de contato](/public/docs/contato.png)
+![Tela de contato](public/docs/contato.png)
 
 ## 🚀 Como Rodar o Projeto
 
