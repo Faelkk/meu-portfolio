@@ -129,6 +129,10 @@ button:focus-visible, a:focus-visible { outline: 2px solid #5f8eaf; outline-offs
 .button-secondary:hover { transform: translateY(-2px); border-color: #6b7280; }
 .dark .button-secondary { border-color: rgba(255,255,255,.14); color: #e5e7eb; background: rgba(255,255,255,.035); }
 .button-primary:active, .button-secondary:active { transform: translateY(0) scale(.98); }
+.language-toggle { display: grid; width: 2.5rem; height: 2.5rem; place-items: center; border: 1px solid #dbe1e7; border-radius: 999px; background: #fff; color: #365f7e; font-size: .68rem; font-weight: 800; letter-spacing: .04em; transition: transform var(--duration-normal) var(--ease-standard), border-color var(--duration-normal) ease, background var(--duration-normal) ease; }
+.language-toggle:hover { transform: translateY(-1px); border-color: #a8c5da; background: #f3f7fa; }
+.dark .language-toggle { border-color: rgba(255,255,255,.1); background: rgba(255,255,255,.05); color: #a8c5da; }
+.dark .language-toggle:hover { border-color: rgba(127,168,196,.4); background: rgba(127,168,196,.1); }
 .hero-marquee { position: relative; width: 100vw; margin-left: calc(50% - 50vw); overflow: hidden; padding-block: 1rem; }
 .hero-marquee::before,
 .hero-marquee::after { content: ""; position: absolute; z-index: 2; top: 0; bottom: 0; width: 20%; pointer-events: none; }
