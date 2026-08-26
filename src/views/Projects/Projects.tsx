@@ -4,8 +4,11 @@ import Loading from "../../Components/Loading/Loading";
 import useProject from "./useProject";
 import ModalProjects from "./components/ModalProjects/ModalProjects";
 import useModal from "../../Components/Modal/useModal";
+import { useLanguage } from "../../app/i18n/LanguageContext";
+import { projectDescriptionsEn } from "../../app/i18n/projectDescriptions";
 
 const Projects = () => {
+  const { language, content } = useLanguage();
   const { isVisibleModal, handleOpenModal, handleCloseModal } = useModal();
   const { projectModal, projects, isLoading, handleClickProject } = useProject(handleOpenModal);
 
@@ -18,20 +21,20 @@ const Projects = () => {
       <section className="w-full max-w-7xl px-6 lg:px-10">
         <div className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
-            <h2 className="section-title">Projetos.</h2>
+            <h2 className="section-title">{content.projects.title}</h2>
           </div>
           <a className="text-link" href="https://github.com/Faelkk?tab=repositories" target="_blank" rel="noreferrer">
-            Ver todos no GitHub <ArrowTopRightIcon />
+            {content.projects.allGithub} <ArrowTopRightIcon />
           </a>
         </div>
 
         <div className="grid gap-5 md:grid-cols-2">
           {allProjects.map((project, index) => (
             <article className="project-card group" key={project.name}>
-              <button className="project-preview" onClick={() => handleClickProject(project)} aria-label={`Ver detalhes de ${project.name}`}>
+              <button className="project-preview" onClick={() => handleClickProject(project)} aria-label={`${content.projects.viewDetails} ${project.name}`}>
                 <span className="project-number">{String(index + 1).padStart(2, "0")}</span>
                 {project.defaultimage?.trim() ? (
-                  <img src={project.defaultimage} alt={`Interface do projeto ${project.name}`} />
+                  <img src={project.defaultimage} alt={`${content.projects.interface} ${project.name}`} />
                 ) : (
                   <img className="project-logo" src={project.cardimage} alt="" />
                 )}
@@ -46,13 +49,15 @@ const Projects = () => {
                       ))}
                     </div>
                   </div>
-                  <a className="icon-link" href={project.urlGithub} target="_blank" rel="noreferrer" aria-label={`GitHub de ${project.name}`}>
+                  <a className="icon-link" href={project.urlGithub} target="_blank" rel="noreferrer" aria-label={`${content.projects.github} ${project.name}`}>
                     <GitHubLogoIcon />
                   </a>
                 </div>
-                <p className="mt-5 line-clamp-2 leading-7 text-gray-600 dark:text-gray-400">{project.description}</p>
+                <p className="mt-5 line-clamp-2 leading-7 text-gray-600 dark:text-gray-400">
+                  {language === "en" ? projectDescriptionsEn[project.id ?? ""] ?? project.description : project.description}
+                </p>
                 <button className="mt-6 text-link" onClick={() => handleClickProject(project)}>
-                  Explorar projeto <ArrowTopRightIcon />
+                  {content.projects.explore} <ArrowTopRightIcon />
                 </button>
               </div>
             </article>

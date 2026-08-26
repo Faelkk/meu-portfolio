@@ -1,0 +1,17 @@
+export const projectDescriptionsEn: Record<string, string> = {
+  "1": "The front end of Library Management, built for school libraries. It streamlines textbook and literature cataloging, loans, returns, collection organization, and user management. The interface prioritizes usability, accessibility, and responsive behavior for students, teachers, and administrators.",
+  "2": "An ASP.NET Core API for managing books, users, and loans in a school library serving more than 800 people. It includes JWT authentication, Swagger documentation, and modern architecture practices focused on security and efficiency.",
+  "3": "A barbershop front end with an intuitive, modern interface. It presents locations, services, staff, social profiles, and contact details, while integrated authentication allows barbers and clients to manage appointments efficiently.",
+  "4": "A barbershop management API built with NestJS and Mongoose, using MongoDB for data persistence and Supabase for image storage.",
+  "5": "A real-time communication application built with Next.js. It includes user authentication, connection management, messaging, audio, and image sharing. Integrated with the TalkFly API, it delivers a dynamic and personalized communication experience.",
+  "6": "A Node.js API for real-time conversations using sockets for instant communication. It provides JWT authentication, user connection management, messaging, and multimedia file delivery.",
+  "7": "A front-end application for tracking and managing debts, loans, and installments, with a modern, secure, and intuitive interface for personal or business finances.",
+  "8": "A complete multi-user debt management system designed to simplify loans. It supports creating, listing, splitting, and recording debt payments. Built with .NET and DynamoDB, it integrates with AWS Lambda and API Gateway for scalability and high availability.",
+  "9": "A financial management front end developed as part of the JStack course and integrated with the Fincheck API. It helps users manage expenses, income, and overall personal finances.",
+  "10": "A NestJS API developed during the JStack course to support the Fincheck financial management front end and deepen practical experience with backend architecture and financial data workflows.",
+  "11": "The Angular interface for a microservice-based authentication system. It provides sign-in, registration, and password recovery flows while communicating with the authentication service through REST APIs.",
+  "12": "A .NET microservices authentication system using JSON Web Tokens and RabbitMQ for email notifications. Docker supports deployment, MySQL provides relational persistence, and each service operates independently for modularity and scalability.",
+  "13": "A .NET microservices system that simulates a complete payment flow. It includes Product, Order, and Payment services plus an Ocelot API Gateway. Every service runs in Docker and uses MySQL for persistence.",
+  "14": "A subscription API that sends monthly email content based on each user's interests. Built with ASP.NET 9, Dapper, PostgreSQL, Hangfire background jobs, Stripe payments, and Kafka for asynchronous communication between services.",
+  "15": "A file management API with validation, local or Cloudinary storage, and deletion support. RabbitMQ processes uploads and deletions asynchronously for better performance and reliability, while an MVC-inspired REST architecture keeps the code modular and maintainable.",
+};

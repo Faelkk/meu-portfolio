@@ -2,6 +2,8 @@ import { ArrowTopRightIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import type { Project } from "../../../../app/hooks/useProjects";
 import Modal from "../../../../Components/Modal/Modal";
 import ImageDefaultModal from "../ImageDefaultModal/ImageDefaultModal";
+import { useLanguage } from "../../../../app/i18n/LanguageContext";
+import { projectDescriptionsEn } from "../../../../app/i18n/projectDescriptions";
 
 interface ModalProjectsProps {
   projectModal: Project | null;
@@ -10,11 +12,12 @@ interface ModalProjectsProps {
 }
 
 const ModalProjects = ({ projectModal, onCloseModal, isVisibleModal }: ModalProjectsProps) => {
+  const { language, content } = useLanguage();
   if (!projectModal) return null;
 
   return (
     <Modal
-      title={projectModal.name ?? "Detalhes do projeto"}
+      title={projectModal.name ?? content.projects.fallbackTitle}
       onClose={onCloseModal}
       open={isVisibleModal}
       classNameOverlay="data-[state=open]:animate-overlayShow"
@@ -26,7 +29,7 @@ const ModalProjects = ({ projectModal, onCloseModal, isVisibleModal }: ModalProj
             {projectModal.cardimage?.trim() ? (
               <img src={projectModal.cardimage} alt="" aria-hidden="true" />
             ) : (
-              <span>Projeto</span>
+              <span>{content.projects.project}</span>
             )}
           </div>
 
@@ -40,32 +43,32 @@ const ModalProjects = ({ projectModal, onCloseModal, isVisibleModal }: ModalProj
 
           <div className="project-dialog-actions">
             <a href={projectModal.urlGithub} target="_blank" rel="noreferrer">
-              <GitHubLogoIcon /> Código fonte
+              <GitHubLogoIcon /> {content.projects.source}
             </a>
             <a href={projectModal.url} target="_blank" rel="noreferrer">
-              Abrir projeto <ArrowTopRightIcon />
+              {content.projects.open} <ArrowTopRightIcon />
             </a>
           </div>
         </aside>
 
         <section className="project-dialog-details">
           {projectModal.defaultimage?.trim() ? (
-            <a href={projectModal.url} target="_blank" rel="noreferrer" aria-label={`Abrir ${projectModal.name}`}>
+            <a href={projectModal.url} target="_blank" rel="noreferrer" aria-label={`${content.projects.open}: ${projectModal.name}`}>
               <figure className="project-dialog-image">
                 <ImageDefaultModal
                   className="h-full w-full object-cover object-top opacity-0 transition-opacity duration-200"
                   src={projectModal.defaultimage}
-                  alt={`Interface do projeto ${projectModal.name}`}
+                  alt={`${content.projects.interface} ${projectModal.name}`}
                 />
               </figure>
             </a>
           ) : (
-            <div className="project-dialog-image project-dialog-empty">Imagem não disponível</div>
+            <div className="project-dialog-image project-dialog-empty">{content.projects.unavailable}</div>
           )}
 
           <div className="project-dialog-copy">
-            <h3>Sobre o projeto</h3>
-            <p>{projectModal.description}</p>
+            <h3>{content.projects.about}</h3>
+            <p>{language === "en" ? projectDescriptionsEn[projectModal.id ?? ""] ?? projectModal.description : projectModal.description}</p>
           </div>
         </section>
       </div>
